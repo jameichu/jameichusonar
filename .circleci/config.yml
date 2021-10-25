@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.2
+  sonarcloud: sonarsource/sonarcloud@1.0.0
 
 jobs:
   example-job:
@@ -16,4 +16,4 @@ workflows:
   example-workflow:
     jobs:
       - example-job:
-          context: SonarCloud
+          context: sonarcloud 
