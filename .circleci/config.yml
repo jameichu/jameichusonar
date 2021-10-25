@@ -16,4 +16,4 @@ workflows:
   example-workflow:
     jobs:
       - example-job:
-          context: sonarcloud 
+          context: SonarCloud
