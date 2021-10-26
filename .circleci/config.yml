@@ -7,8 +7,9 @@ jobs:
   example-job:
     docker:
       # replace with your preferred image
-      - image: cimg/base:stable
+      - image: 'circleci/python:3.7.4'
     steps:
+      - checkout
       - sonarcloud/scan:
           sonar_token_variable_name: 'SONAR_TOKEN' 
           cache_version: 1
@@ -18,7 +19,3 @@ workflows:
     jobs:
       - example-job:
           context: SonarCloud
-          filters:
-            branches:
-              only:
-                - main
